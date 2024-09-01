@@ -1,0 +1,78 @@
+name: "Dingtalk Robot Notify"
+description: "Send notifications to Dingtalk"
+inputs:
+  status:
+    description: "job status"
+    default: ${{ job.status }}
+
+  msgtype:
+    description: "dingtalk message type"
+    required: false
+    default: "text"
+
+  notify_when:
+    description: "Specify on which events a dingtalk notification is sent"
+    required: false
+    default: "success,failure,cancelled"
+
+  title:
+    description: "message title"
+    required: false
+    default: "This is the default title"
+
+  text:
+    description: "message text or markdown format context"
+    required: false
+    default: "This is the default content"
+
+  at_mobiles:
+    description: "atMobiles"
+    required: false
+    default: ""
+
+  at_all:
+    description: "isAtAll"
+    required: false
+    default: ""
+
+  msg_url:
+    description: "messageUrl for link type message"
+    required: false
+    default: ""
+
+  pic_url:
+    description: "picUrl for link type message"
+    required: false
+    default: ""
+
+  single_title:
+    description: "single button title for actionCard type message"
+    required: false
+    default: ""
+
+  single_url:
+    description: "single button url for actionCard type message"
+    required: false
+    default: ""
+
+  btn_orientation:
+    description: "button arrangement for actionCard type message"
+    required: false
+    default: ""
+
+  btns:
+    description: "button list for actionCard type message"
+    required: false
+    default: ""
+
+  feed_links:
+    description: "feed links list for feedCard type message"
+    required: false
+    default: ""
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+branding:
+  icon: "bell"
+  color: "green"
