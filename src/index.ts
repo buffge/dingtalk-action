@@ -156,6 +156,7 @@ async function run() {
     }
 
   } catch (err) {
+    console.log("dingtalk exception: ",err)
     core.setFailed((err as Error).message);
   }
 }

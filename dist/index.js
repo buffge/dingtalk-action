@@ -27256,7 +27256,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 399:
+/***/ 6144:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -27432,6 +27432,7 @@ async function run() {
         }
     }
     catch (err) {
+        console.log("dingtalk exception: ", err);
         core.setFailed(err.message);
     }
 }
@@ -34137,7 +34138,7 @@ module.exports = JSON.parse('{"application/1d-interleaved-parityfec":{"source":"
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __nccwpck_require__(399);
+/******/ 	var __webpack_exports__ = __nccwpck_require__(6144);
 /******/ 	module.exports = __webpack_exports__;
 /******/ 	
 /******/ })()
