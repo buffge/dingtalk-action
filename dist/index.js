@@ -27418,7 +27418,8 @@ async function run() {
             const ret = await axios_1.default.post(url.toString(), JSON.stringify(payload), {
                 headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+                proxy: false,
             });
             if (ret.data.errcode) {
                 throw new Error(`钉钉机器人返回错误: [${ret.data.errcode}] ${ret.data.errmsg}`);

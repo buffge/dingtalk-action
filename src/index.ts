@@ -143,7 +143,8 @@ async function run() {
       const ret = await axios.post(url.toString(), JSON.stringify(payload), {
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
+        proxy:false,
       });
 
       if (ret.data.errcode) {
