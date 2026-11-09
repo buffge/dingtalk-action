@@ -2,20 +2,21 @@
   "name": "dingtalk-action",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "repository": "git@github.com:buffge/dingtalk-action.git",
   "author": "buffge <admin@buffge.com>",
   "license": "MIT",
   "scripts": {
-    "package": "ncc build src/index.ts -o dist "
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --minify --target=node24 --tree-shaking=true --legal-comments=none --banner:js=\"import{createRequire}from'node:module';const require=createRequire(import.meta.url);\" --outfile=dist/index.js"
   },
   "dependencies": {
-    "@actions/core": "^1.10.1",
-    "axios": "^1.7.7"
+    "@actions/core": "^3.0.1",
+    "axios": "^1.21.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@types/node": "^22.5.1",
-    "@vercel/ncc": "^0.38.1",
-    "typescript": "^5.5.4"
+    "@biomejs/biome": "^2.6.6",
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
   }
 }

@@ -71,7 +71,7 @@ inputs:
     default: ""
 
 runs:
-  using: "node26"
+  using: "node24"
   main: "dist/index.js"
 branding:
   icon: "bell"
